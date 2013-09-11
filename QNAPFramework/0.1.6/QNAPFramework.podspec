@@ -78,8 +78,19 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'QNAPFramework', 'QNAPFramework/**/*.{h,m}'
-  s.exclude_files = 'QNAPFramework/Exclude'
+  s.subspec 'arc' do |sp|
+    sp.source_files  = FileList['QNAPFramework/**/*.{h,m}'].exclude('XMLReader.*')
+    sp.requires_arc = true
+  end
+
+  s.subspec 'no-arc' do |sp|
+    sp.source_files  = 'XMLReader.{h,m}'
+    sp.requires_arc = false
+    sp.compiler_flags = '-fno-objc-arc'
+  end
+
+  # s.source_files  = 'QNAPFramework', 'QNAPFramework/**/*.{h,m}'
+  # s.exclude_files = 'QNAPFramework/Exclude'
 
   # s.public_header_files = 'Classes/**/*.h'
 
@@ -116,7 +127,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  s.requires_arc = true
+  # s.requires_arc = true
 
   # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
   s.dependency 'JSONKit', '~> 1.4'
