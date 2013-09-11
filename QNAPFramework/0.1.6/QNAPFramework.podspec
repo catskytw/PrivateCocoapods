@@ -114,6 +114,7 @@ Pod::Spec.new do |s|
 
   s.frameworks = 'CFNetwork', 'CoreData', 'CoreGraphics', 'Foundation', 'MobileCoreServices', 'Security', 'SystemConfiguration'
 
+
   # s.library   = 'iconv'
   # s.libraries = 'iconv', 'xml2'
 
