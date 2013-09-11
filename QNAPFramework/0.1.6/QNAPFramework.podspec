@@ -92,7 +92,6 @@ Pod::Spec.new do |s|
   # s.exclude_files = 'QNAPFramework/Exclude'
   # s.public_header_files = 'Classes/**/*.h'
 
-
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  A list of resources included with the Pod. These are copied into the
