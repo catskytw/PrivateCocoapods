@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "QNAPFramework"
-  s.version      = "0.1.4"
+  s.version      = "0.1.5"
   s.summary      = "A short description of QNAPFramework."
 
   s.description  = 'A framework produted by QNAP Inc. for developers to build an app fast, which is including all NAS"s APIs you need.'
@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/catskytw/QNAPFramework.git", :tag => "0.1.4" }
+  s.source       = { :git => "https://github.com/catskytw/QNAPFramework.git", :tag => "0.1.5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
