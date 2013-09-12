@@ -133,4 +133,5 @@ Pod::Spec.new do |s|
   s.dependency 'CocoaLumberjack', '~>1.6'
   s.dependency 'AFOAuth2Client', '~> 0.1.1'
   s.dependency 'Expecta',     '~> 0.2.2'  
+  s.dependency 'SDWebImage',  '~> 3.4'
 end
