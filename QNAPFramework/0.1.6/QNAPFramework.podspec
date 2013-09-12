@@ -112,7 +112,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.frameworks = 'CFNetwork', 'CoreData', 'CoreGraphics', 'Foundation', 'MobileCoreServices', 'Security', 'SystemConfiguration'
+  s.frameworks = 'CFNetwork', 'CoreData', 'CoreGraphics', 'Foundation', 'MobileCoreServices', 'Security', 'SystemConfiguration', 'ImageIO'
 
 
   # s.library   = 'iconv'
