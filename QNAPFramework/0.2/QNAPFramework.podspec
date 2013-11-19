@@ -134,4 +134,5 @@ Pod::Spec.new do |s|
   s.dependency 'AFOAuth2Client', '~> 0.1.1'
   s.dependency 'Expecta',     '~> 0.2.2'  
   s.dependency 'SDWebImage', '~> 3.5'
+  s.dependency 'CocoaAsyncSocket', '~> 7.3.2'
 end
