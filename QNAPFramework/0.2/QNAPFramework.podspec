@@ -79,11 +79,11 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = 'QNAPFramework/**/*.{h,m}'
-  s.exclude_files = 'XMLReader.h', 'XMLReader.m'
-  s.requires_arc = true
+  s.exclude_files = 'XMLReader.h', 'XMLReader.m', 'AOPProxy.h', 'AOPProxy.m', 'QFTUTKTunnel.h', 'QFTUTKTunnel.m', 'AOPThreadInvoker.h', 'AOPThreadInvoker.m'
+  s.requires_arc = false
 
   s.subspec 'no-arc' do |sp|
-    sp.source_files  = 'XMLReader.{h,m}'
+    sp.source_files  = 'XMLReader.{h,m}, AOPProxy.{h,m}, QFTUTKTunnel.{h,m}, AOPThreadInvoker.{h,m}'
     sp.requires_arc = false
     sp.compiler_flags = '-fno-objc-arc'
   end
@@ -116,7 +116,7 @@ Pod::Spec.new do |s|
 
 
   # s.library   = 'iconv'
-  # s.libraries = 'iconv', 'xml2'
+  s.libraries = 'libIOTCAPIs_ALL', 'libMediaLibraryKitUniversal', 'libMobileVLCKitUniversal', 'libupnpxUniversal'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
