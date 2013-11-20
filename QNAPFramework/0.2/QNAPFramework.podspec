@@ -78,12 +78,12 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "QNAPFramework/**/*.{h,m}"
-  s.exclude_files = "QNAPFramework/**/{XMLReader,AOPProxy,QFTUTKTunnel,AOPThreadInvoker}.m"
+  s.source_files  = 'QNAPFramework/**/*.{h,m}'
+  s.exclude_files = 'QNAPFramework/**/{XMLReader,AOPProxy,QFTUTKTunnel,AOPThreadInvoker}.m'
   s.requires_arc = true
 
   s.subspec 'no-arc' do |sp|
-    sp.source_files  = "QNAPFramework/**/XMLReader.{h,m}", "QNAPFramework/**/AOPProxy.{h,m}", "QNAPFramework/**/QFTUTKTunnel.{h,m}","QNAPFramework/**/AOPThreadInvoker.{h,m}"
+    sp.source_files  = 'QNAPFramework/**/XMLReader.{h,m}', 'QNAPFramework/**/AOPProxy.{h,m}', 'QNAPFramework/**/QFTUTKTunnel.{h,m}','QNAPFramework/**/AOPThreadInvoker.{h,m}'
     sp.requires_arc = false
   end
 
@@ -115,7 +115,7 @@ Pod::Spec.new do |s|
 
 
   # s.library   = 'iconv'
-  s.libraries = 'libIOTCAPIs_ALL', 'libMediaLibraryKitUniversal', 'libMobileVLCKitUniversal', 'libupnpxUniversal'
+  s.vendored_library = 'libIOTCAPIs_ALL.a', 'libMediaLibraryKitUniversal.a', 'libMobileVLCKitUniversal.a', 'libupnpxUniversal.a'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
