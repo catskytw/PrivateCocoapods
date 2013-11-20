@@ -115,7 +115,7 @@ Pod::Spec.new do |s|
 
 
   # s.library   = 'iconv'
-  s.vendored_library = 'libIOTCAPIs_ALL.a', 'libMediaLibraryKitUniversal.a', 'libMobileVLCKitUniversal.a', 'libupnpxUniversal.a'
+  s.vendored_library = 'libIOTCAPIs_ALL.a','libMediaLibraryKitUniversal.a','libMobileVLCKitUniversal.a', 'libupnpxUniversal.a'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
