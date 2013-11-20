@@ -100,7 +100,7 @@ Pod::Spec.new do |s|
   #
 
   s.resource  = "Resources/*.png"
-  s.resources = [ '**/*.{xcdatamodel,xcdatamodeld}', '**/*.a']
+  s.resources = [ '**/*.{xcdatamodel,xcdatamodeld}', '**/*.a', '**/*.png']
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
