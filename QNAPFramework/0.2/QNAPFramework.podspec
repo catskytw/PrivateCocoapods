@@ -99,8 +99,8 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resource  = "Resources/*.png"
-  s.resources = [ '**/*.{xcdatamodel,xcdatamodeld}', '**/*.a', '**/*.png']
+  # s.resource  = "Resources/*.png"
+  s.resources = [ '**/*.{xcdatamodel,xcdatamodeld}', '**/*.a', '**/*.png', '**/*.jpg']
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
