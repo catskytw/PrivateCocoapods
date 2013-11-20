@@ -78,13 +78,12 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'QNAPFramework/**/*.{h,m}'
-  s.exclude_files = 'QNAPFramework/**/{XMLReader,AOPProxy,QFTUTKTunnel,AOPThreadInvoker}.m'
+  s.source_files  = "QNAPFramework/**/*.{h,m}"
+  s.exclude_files = "QNAPFramework/**/{XMLReader,AOPProxy,QFTUTKTunnel,AOPThreadInvoker}.m"
   s.requires_arc = true
-  s.
 
   s.subspec 'no-arc' do |sp|
-    sp.source_files  = 'QNAPFramework/**/{XMLReader,AOPProxy,QFTUTKTunnel,AOPThreadInvoker}.m'
+    sp.source_files  = "QNAPFramework/**/XMLReader.{h,m}", "QNAPFramework/**/AOPProxy.{h,m}", "QNAPFramework/**/QFTUTKTunnel.{h,m}","QNAPFramework/**/AOPThreadInvoker.{h,m}"
     sp.requires_arc = false
   end
 
