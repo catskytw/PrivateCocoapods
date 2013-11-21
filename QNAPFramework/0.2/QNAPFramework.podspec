@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = 'BSD'
+  s.license      = 'GPL'
   # s.license      = { :type => 'MIT', :file => 'FILE_LICENSE' }
 
 
@@ -100,7 +100,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "Resources/*.png"
-  s.resources = [ '**/*.{xcdatamodel,xcdatamodeld}', '**/*.a', '**/*.png', '**/*.jpg']
+  s.resources = [ '**/*.{xcdatamodel,xcdatamodeld,mom}', '**/*.a', '**/*.{png,jpg,jpeg}', '**/*.xib', '**/*.bundle' ]
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
