@@ -114,8 +114,8 @@ Pod::Spec.new do |s|
   s.frameworks = 'CFNetwork', 'CoreData', 'CoreGraphics', 'Foundation', 'MobileCoreServices', 'Security', 'SystemConfiguration', 'OpenGLES', 'AudioToolBox', 'MediaPlayer', 'AVFoundation', 'CoreText'
 
 
-  # s.library   = 'iconv'
-  s.vendored_library = 'libIOTCAPIs_ALL.a','libMediaLibraryKitUniversal.a','libMobileVLCKitUniversal.a', 'libupnpxUniversal.a'
+  s.library   = 'iconv', 'stdc++','bz2'
+  s.vendored_library = 'IOTCAPIs_ALL.a','MediaLibraryKitUniversal.a','MobileVLCKitUniversal.a', 'upnpxUniversal.a'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
