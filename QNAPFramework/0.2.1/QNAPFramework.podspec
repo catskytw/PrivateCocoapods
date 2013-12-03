@@ -129,7 +129,7 @@ Pod::Spec.new do |s|
   s.dependency 'JSONKit', '~> 1.4'
   s.dependency 'RestKit', '~> 0.20.0rc'
   s.dependency 'MagicalRecord', '~> 2.1'
-  s.dependency 'CocoaLumberjack', ‘1.6'
+  s.dependency 'CocoaLumberjack', '1.6'
   s.dependency 'AFOAuth2Client', '~> 0.1.1'
   s.dependency 'Expecta',     '~> 0.2.2'  
   s.dependency 'SDWebImage', '~> 3.5'
