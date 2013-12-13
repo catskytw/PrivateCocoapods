@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "QNAPFramework"
-  s.version      = "0.2.4"
+  s.version      = "0.2.5"
   s.summary      = "A toolkit for developing app with QNAP's NAS"
 
   s.description  = 'A framework produted by QNAP Inc. for developers to build an app fast, which is including all NAS"s APIs you need.'
@@ -115,7 +115,8 @@ Pod::Spec.new do |s|
 
 
   s.library   = 'iconv', 'stdc++','bz2'
-  s.vendored_library = 'IOTCAPIs_ALL.a' ,'MediaLibraryKitUniversal.a','MobileVLCKitUniversal.a', 'upnpxUniversal.a'
+  s.vendored_library = 'IOTCAPIs_ALL.a' 
+  #,'MediaLibraryKitUniversal.a','MobileVLCKitUniversal.a', 'upnpxUniversal.a'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
