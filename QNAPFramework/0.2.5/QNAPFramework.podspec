@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, '6.1'
+  s.platform     = :ios, '7.0'
 
   #  When using multiple platforms
   # s.ios.deployment_target = '5.0'
@@ -100,7 +100,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "Resources/*.png"
-  s.resources = [ '**/*.{xcdatamodel,xcdatamodeld,mom}', '**/libIOTCAPIs_ALL.a.a', '**/*.{png,jpg,jpeg}', '**/*.xib', '**/*.bundle' ]
+  s.resources = [ '**/*.{xcdatamodel,xcdatamodeld,mom}', '**/*.{png,jpg,jpeg}', '**/*.xib', '**/*.bundle' ]
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -115,8 +115,7 @@ Pod::Spec.new do |s|
 
 
   s.library   = 'iconv', 'stdc++','bz2'
-  s.vendored_library = 'IOTCAPIs_ALL.a' 
-  #,'MediaLibraryKitUniversal.a','MobileVLCKitUniversal.a', 'upnpxUniversal.a'
+  # s.vendored_library = 'IOTCAPIs_ALL.a' ,'MediaLibraryKitUniversal.a','MobileVLCKitUniversal.a', 'upnpxUniversal.a'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
