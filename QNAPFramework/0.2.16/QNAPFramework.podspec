@@ -16,11 +16,11 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "QNAPFramework"
-  s.version      = "0.1.6"
-  s.summary      = "A short description of QNAPFramework."
+  s.version      = "0.2.16"
+  s.summary      = "A toolkit for developing app with QNAP's NAS"
 
   s.description  = 'A framework produted by QNAP Inc. for developers to build an app fast, which is including all NAS"s APIs you need.'
-  s.homepage     = "https://github.com/catskytw/QNAPFramework"
+  s.homepage     = "http://gitlab.myqnapcloud.com/"
   # s.screenshots  = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
 
 
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = 'BSD'
+  s.license      = 'GPL'
   # s.license      = { :type => 'MIT', :file => 'FILE_LICENSE' }
 
 
@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
   #
 
   # s.platform     = :ios
-  s.platform     = :ios, '5.0'
+  s.platform     = :ios, '7.0'
 
   #  When using multiple platforms
   # s.ios.deployment_target = '5.0'
@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/catskytw/QNAPFramework.git", :tag => "0.1.6" }
+  s.source       = { :git => "https://catskytw@bitbucket.org/catskytw/qnap_ios_framework.git"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -78,16 +78,13 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.subspec 'arc' do |sp|
-    s.source_files  = 'QNAPFramework/**/*.{h,m}'
-    s.exclude_files = 'XMLReader.h', 'XMLReader.m'
-    s.requires_arc = true
-  end
-  
+  s.source_files  = 'QNAPFramework/**/*.{h,m}'
+  s.exclude_files = 'QNAPFramework/**/{XMLReader,AOPProxy,QFTUTKTunnel,AOPThreadInvoker}.m'
+  s.requires_arc = true
+
   s.subspec 'no-arc' do |sp|
-    sp.source_files  = 'XMLReader.{h,m}'
+    sp.source_files  = 'QNAPFramework/**/XMLReader.{h,m}', 'QNAPFramework/**/AOPProxy.{h,m}', 'QNAPFramework/**/QFTUTKTunnel.{h,m}','QNAPFramework/**/AOPThreadInvoker.{h,m}'
     sp.requires_arc = false
-    sp.compiler_flags = '-fno-objc-arc'
   end
 
   # s.source_files  = 'QNAPFramework', 'QNAPFramework/**/*.{h,m}'
@@ -102,8 +99,8 @@ Pod::Spec.new do |s|
   #  non-essential files like tests, examples and documentation.
   #
 
-  s.resource  = "Resources/*.png"
-  s.resources = [ '**/*.{xcdatamodel,xcdatamodeld}']
+  # s.resource  = "Resources/*.png"
+  s.resources = [ '**/*.{xcdatamodel,xcdatamodeld,mom}', '**/*.{png,jpg,jpeg}', '**/*.xib', '**/*.bundle' ]
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -114,11 +111,11 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.frameworks = 'CFNetwork', 'CoreData', 'CoreGraphics', 'Foundation', 'MobileCoreServices', 'Security', 'SystemConfiguration', 'ImageIO'
+  s.frameworks = 'CFNetwork', 'CoreData', 'CoreGraphics', 'Foundation', 'MobileCoreServices', 'Security', 'SystemConfiguration', 'OpenGLES', 'AudioToolBox', 'MediaPlayer', 'AVFoundation', 'CoreText'
 
 
-  # s.library   = 'iconv'
-  # s.libraries = 'iconv', 'xml2'
+  s.library   = 'iconv', 'stdc++','bz2'
+  # s.vendored_library = 'IOTCAPIs_ALL.a' ,'MediaLibraryKitUniversal.a','MobileVLCKitUniversal.a', 'upnpxUniversal.a'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -130,10 +127,11 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
   s.dependency 'JSONKit', '~> 1.4'
-  s.dependency 'RestKit', '~> 0.20.3'
+  s.dependency 'RestKit', '~> 0.20.0rc'
   s.dependency 'MagicalRecord', '~> 2.1'
-  s.dependency 'CocoaLumberjack', '~>1.6'
+  s.dependency 'CocoaLumberjack', '1.6'
   s.dependency 'AFOAuth2Client', '~> 0.1.1'
   s.dependency 'Expecta',     '~> 0.2.2'  
-  s.dependency 'SDWebImage',  '~> 3.4'
+  s.dependency 'SDWebImage', '~> 3.5'
+  s.dependency 'CocoaAsyncSocket', '~> 7.3.2'
 end
