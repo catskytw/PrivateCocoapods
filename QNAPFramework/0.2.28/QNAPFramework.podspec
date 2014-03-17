@@ -104,7 +104,8 @@ Pod::Spec.new do |s|
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
-
+    s.prefix_header_contents = "#import <CoreData/CoreData.h>"
+    s.prefix_header_contents = "#import \"QNAPFrameworkUtil.h\""
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  Link your library with frameworks, or libraries. Libraries do not include
