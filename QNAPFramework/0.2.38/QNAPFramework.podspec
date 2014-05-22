@@ -89,8 +89,8 @@ Pod::Spec.new do |s|
 
   # s.source_files  = 'QNAPFramework', 'QNAPFramework/**/*.{h,m}'
   # s.exclude_files = 'QNAPFramework/Exclude'
-  # s.public_header_files = 'Classes/**/*.h'
-
+  # s.public_header_files = 'cocoapodsHeaderfile.h'
+  s.prefix_header_contents = '#import "cocoapodsHeaderfile.h"'
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  A list of resources included with the Pod. These are copied into the
