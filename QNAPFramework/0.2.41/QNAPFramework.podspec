@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "QNAPFramework"
-  s.version      = "0.2.16"
+  s.version      = "0.2.41"
   s.summary      = "A toolkit for developing app with QNAP's NAS"
 
   s.description  = 'A framework produted by QNAP Inc. for developers to build an app fast, which is including all NAS"s APIs you need.'
@@ -89,8 +89,8 @@ Pod::Spec.new do |s|
 
   # s.source_files  = 'QNAPFramework', 'QNAPFramework/**/*.{h,m}'
   # s.exclude_files = 'QNAPFramework/Exclude'
-  # s.public_header_files = 'Classes/**/*.h'
-
+  # s.public_header_files = 'cocoapodsHeaderfile.h'
+  s.prefix_header_contents = '#import "cocoapodsHeaderfile.h"'
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  A list of resources included with the Pod. These are copied into the
@@ -104,7 +104,6 @@ Pod::Spec.new do |s|
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
-
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  Link your library with frameworks, or libraries. Libraries do not include
@@ -114,7 +113,7 @@ Pod::Spec.new do |s|
   s.frameworks = 'CFNetwork', 'CoreData', 'CoreGraphics', 'Foundation', 'MobileCoreServices', 'Security', 'SystemConfiguration', 'OpenGLES', 'AudioToolBox', 'MediaPlayer', 'AVFoundation', 'CoreText'
 
 
-  s.library   = 'iconv', 'stdc++','bz2'
+  s.library   = 'iconv','bz2', 'c++'
   # s.vendored_library = 'IOTCAPIs_ALL.a' ,'MediaLibraryKitUniversal.a','MobileVLCKitUniversal.a', 'upnpxUniversal.a'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -127,7 +126,7 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
   s.dependency 'JSONKit', '~> 1.4'
-  s.dependency 'RestKit', '~> 0.20.0rc'
+  s.dependency 'RestKit', '~> 0.22.0'
   s.dependency 'MagicalRecord', '~> 2.1'
   s.dependency 'CocoaLumberjack', '1.6'
   s.dependency 'AFOAuth2Client', '~> 0.1.1'
