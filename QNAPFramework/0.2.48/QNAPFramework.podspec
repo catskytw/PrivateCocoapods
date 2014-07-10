@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, svn and HTTP.
   #
 
-  s.source       = { :git => "https://bitbucket.org/catskytw/qnap_ios_framework.git"}
+  s.source       = { :git => "git@bitbucket.org:catskytw/qnap_ios_framework.git"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
