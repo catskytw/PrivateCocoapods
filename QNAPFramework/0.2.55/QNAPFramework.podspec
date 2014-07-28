@@ -110,7 +110,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.frameworks = 'CFNetwork', 'CoreData', 'CoreGraphics', 'Foundation', 'MobileCoreServices', 'Security', 'SystemConfiguration', 'OpenGLES', 'AudioToolBox', 'MediaPlayer', 'AVFoundation', 'CoreText'
+  s.frameworks = 'CFNetwork', 'CoreData', 'CoreGraphics', 'Foundation', 'MobileCoreServices', 'Security', 'SystemConfiguration', 'OpenGLES', 'AudioToolBox', 'MediaPlayer', 'AVFoundation', 'CoreText', 'GoogleCast'
 
 
   s.library   = 'iconv','bz2', 'c++'
