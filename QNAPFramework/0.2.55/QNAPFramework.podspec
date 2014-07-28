@@ -109,8 +109,8 @@ Pod::Spec.new do |s|
   #  Link your library with frameworks, or libraries. Libraries do not include
   #  the lib prefix of their name.
   #
-
-  s.frameworks = 'CFNetwork', 'CoreData', 'CoreGraphics', 'Foundation', 'MobileCoreServices', 'Security', 'SystemConfiguration', 'OpenGLES', 'AudioToolBox', 'MediaPlayer', 'AVFoundation', 'CoreText', 'GoogleCast'
+  s.vendored_frameworks = 'GoogleCast.framework'
+  s.frameworks = 'CFNetwork', 'CoreData', 'CoreGraphics', 'Foundation', 'MobileCoreServices', 'Security', 'SystemConfiguration', 'OpenGLES', 'AudioToolBox', 'MediaPlayer', 'AVFoundation', 'CoreText'
 
 
   s.library   = 'iconv','bz2', 'c++'
