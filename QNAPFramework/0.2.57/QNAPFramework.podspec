@@ -114,7 +114,7 @@ Pod::Spec.new do |s|
 
 
   s.library   = 'iconv','bz2', 'c++'
-  # s.vendored_library = 'IOTCAPIs_ALL.a' ,'MediaLibraryKitUniversal.a','MobileVLCKitUniversal.a', 'upnpxUniversal.a'
+  s.vendored_library = 'IOTCAPIs_ALL.a' ,'MediaLibraryKit_iOS.a','MediaLibraryKit_simulator.a', 'MobileVLCKit_iOS.a', 'MobileVLCKit_simulator.a', 'upnpx_iOS.a', 'upnpx_simulator.a'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
