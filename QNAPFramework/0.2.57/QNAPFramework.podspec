@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "QNAPFramework"
-  s.version      = "0.2.56"
+  s.version      = "0.2.57"
   s.summary      = "A toolkit for developing app with QNAP's NAS"
 
   s.description  = 'A framework produted by QNAP Inc. for developers to build an app fast, which is including all NAS"s APIs you need.'
